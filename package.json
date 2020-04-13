@@ -1,0 +1,32 @@
+{
+  "name": "unergia",
+  "version": "1.0.0",
+  "description": "data collection and retreving the data",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansh2698/Unergia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ansh2698/Unergia/issues"
+  },
+  "homepage": "https://github.com/Ansh2698/Unergia#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "dependable": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-promise-router": "^3.0.3",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.7",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.3"
+  }
+}
