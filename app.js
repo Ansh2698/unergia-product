@@ -6,7 +6,7 @@ var app= express();
 var container=require("./container");
 var mongoose=require("mongoose");
 var _ =require("lodash");
-const PORT=process.env.PORT || 5000;
+const PORT=process.env.PORT || 8000;
 require('dotenv').config();
 container.resolve(function(users){
     mongoose.connect(process.env.DB_CONNECT,{ useNewUrlParser: true ,useUnifiedTopology: true},function(){
@@ -18,7 +18,7 @@ container.resolve(function(users){
         var app=express();
         var server=http.createServer(app);
         server.listen(PORT,function(){
-            console.log("server is running on port 5000");
+            console.log("server is running on port 8000");
         })
         Configure(app);
         var router=require("express-promise-router")();

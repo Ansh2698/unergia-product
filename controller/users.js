@@ -2,21 +2,8 @@
 module.exports=function(Product,local,fs,async){
     return{
         SetRouting:function(router){
-            router.get("/",this.homePage);
-            router.get("/submit",this.GetSubmitpage);
+            router.get("/",this.GetSubmitpage);
             router.post("/submit",local.Upload.single("productImage"),this.SubmitProduct);
-        },
-        homePage:function(req,res){
-            async.parallel([
-                function(callback){
-                    Product.find({},function(err,result){
-                        callback(err,result);
-                    })
-                }
-            ],function(err,results){
-                var res1=results[0];
-                res.render("home",{data:res1});
-            })
         },
         GetSubmitpage:function(req,res){
             return res.render("submit");
